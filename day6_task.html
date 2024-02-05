@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//Write a “person” class to hold all the details.
+    
+        class person{
+            constructor(name,place,age,profession){
+                this.name=name,
+                this.place=place,
+                this.age=age,
+                this.profession=profession;
+                console.log(`The new user is ${this.name} from ${this.place} and he/she is ${this.age} old ${this.profession} `);
+            }
+
+        }
+        let p1=new person("swe","chennai",18,"student")
+        
+
+
+//write a class to calculate the Uber price
+
+class uber{
+    constructor(kmtr,distance){
+        this.kmtr=kmtr;
+        this.distance=distance;
+        this.estimation=this.kmtr*this.distance;
+        
+    }
+    getPrice(){
+        console.log(`the ride cost is ${this.estimation}`);
+    }
+
+    getDiscount(){
+        let discount=(15/100)*this.estimation
+        let afterDiscount=this.estimation-discount
+        console.log(`you got 15% discount`);
+        console.log(`the ride cost after discount is ${afterDiscount}`);
+    }
+    
+}
+
+let value= new uber(5,10)
+value.getPrice()
+value.getDiscount()
+
+    </script>
+</body>
+</html>
